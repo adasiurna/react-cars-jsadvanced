@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CarsItem from '../../components/CarsList/CarsItem';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class Cars extends Component {
 
@@ -16,8 +17,6 @@ class Cars extends Component {
       carForm: {},
       error: undefined
     }
-
-
   }
 
   handleSubmit(event) {
@@ -75,6 +74,50 @@ class Cars extends Component {
     return (
       <div>
         <h1>Automobiliai</h1>
+        <div className="row">
+          <p className="col-2">Pasirinkite:</p>
+          <FormGroup className="col-2">
+            <Label>Metai</Label>
+            <Input type="select" name="category">
+              <option>Visi</option>
+              <option>2012</option>
+              <option>2016</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+            </Input>
+          </FormGroup>
+
+          <FormGroup className="col-2">
+            <Label>Kuro tipas</Label>
+            <Input type="select" name="category">
+              <option>Visi</option>
+              <option>Benzinas</option>
+              <option>Dyzelis</option>
+              <option>Dujos</option>
+              <option>Elektra</option>
+            </Input>
+          </FormGroup>
+
+          <FormGroup className="col-2">
+            <Label>Durų skaičius</Label>
+            <Input type="select" name="category">
+              <option>Visi</option>
+              <option>2</option>
+              <option>4</option>
+            </Input>
+          </FormGroup>
+
+          <FormGroup className="col-2">
+            <Label>Pavarų dėžė</Label>
+            <Input type="select" name="category">
+              <option>Visi</option>
+              <option>Mechaninė</option>
+              <option>Automatinė</option>
+            </Input>
+          </FormGroup>
+
+        </div>
         <CarsItem cars={this.state.cars} />
       </div>
     );

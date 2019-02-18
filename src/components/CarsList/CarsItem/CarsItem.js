@@ -4,9 +4,12 @@ import {
   CardBody,
   CardSubtitle,
   CardTitle,
-  Button
+  Button,
+  CardImg
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import './CarsItem.css';
+
 
 class CarsItem extends Component {
 
@@ -16,7 +19,9 @@ class CarsItem extends Component {
     return (<div className="d-flex flex-wrap">
       {this.props.cars.map((car) => {
         return <div key={car.id}>
-          <Card style={{ backgroundColor: "antiquewhite", marginRight: "10px" }}>
+          <Card className="car-item-card">
+            <CardImg top width="100%" src="https://imgct2.aeplcdn.com/img/800x600/car-data/big/renault-duster-image-13039.png?v=31" alt="Card image cap" />
+
             <CardBody>
               <CardTitle>{car.automobilis}</CardTitle>
               <CardSubtitle>{car.pagaminimo_metai}</CardSubtitle>

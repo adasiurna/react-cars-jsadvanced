@@ -6,7 +6,7 @@ import {
   CardTitle,
   Button
 } from 'reactstrap';
-
+import './StationsItem.css';
 class StationsItem extends Component {
 
   // sitas stateless komponentas turi priimti items masyva iš props ir ji atvaizduoti
@@ -15,10 +15,11 @@ class StationsItem extends Component {
     return (<div className="d-flex flex-wrap">
       {this.props.stations.map((station) => {
         return <div key={station.id}>
-          <Card style={{ backgroundColor: "antiquewhite", marginRight: "10px" }}>
-            <CardBody>
+          <Card className="station-item-card">
+            <CardBody className="station-card-body">
               <CardTitle>{station.pavadinimas}</CardTitle>
-              <CardSubtitle>{station.kontaktai}</CardSubtitle>
+              <CardSubtitle>{station.adresas}</CardSubtitle>
+              <CardSubtitle>{station.telefonas}</CardSubtitle>
               <CardSubtitle>{station.darbo_laikas}</CardSubtitle>
               <Button value={station.id}>Plačiau</Button>
             </CardBody>

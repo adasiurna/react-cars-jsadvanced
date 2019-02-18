@@ -10,7 +10,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
-
+import './NavBar.css';
 import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
@@ -59,7 +59,7 @@ class NavBar extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem><Link to="/cars/add-car-page">Add new car</Link></DropdownItem>
-                  <DropdownItem><Link to="">Add new station</Link></DropdownItem>
+                  <DropdownItem><Link to="/stations/add-station-page">Add new station</Link></DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

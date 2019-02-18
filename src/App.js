@@ -8,6 +8,7 @@ import Cars from './containers/Cars';
 import Stations from './containers/Stations';
 import CarItem from './containers/Cars/CarItem';
 import AddCarPage from './containers/Cars/AddCarPage';
+import AddStationPage from './containers/Stations/AddStationPage';
 
 const Page404 = ({ location }) => (
   <div>
@@ -26,13 +27,19 @@ class App extends Component {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Cars} />
-              <Route path="/cars" component={Cars} />
-              <Route path="/cars/:id" component={CarItem} />
               <Route path="/cars/add-car-page" component={AddCarPage} />
+              <Route path="/stations/add-station-page" component={AddStationPage} />
+              <Route path="/cars/:id" component={CarItem} />
+              <Route path="/cars" component={Cars} />
               <Route path="/stations" component={Stations} />
               <Route component={Page404} />
             </Switch>
           </div>
+          <footer className="page-footer font-small blue">
+            <div className="footer-copyright text-center py-3">© 2018 Copyright:
+              <a href="#"> AutoNuoma.com</a>
+            </div>
+          </footer>
         </div>
       </Router>
     );

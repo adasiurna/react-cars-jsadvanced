@@ -9,42 +9,56 @@ class AddCarPage extends Component {
       <div>
         <h1>Įveskite naują automobilį</h1>
         <Form onSubmit={this.handleSubmit}>
-          <FormGroup>
-            <Label>Gamintojas</Label>
-            <Input type="text" onChange={this.handleChange} value={this.state.carForm.title} placeholder="Gamintojas" />
-          </FormGroup>
-          <FormGroup>
-            <Label>Modelis</Label>
-            <Input type="text" onChange={this.handleChange} value={this.state.carForm.title} placeholder="Modelis" />
-          </FormGroup>
-          <FormGroup>
-            <Label>Metai</Label>
-            <Input type="number" value={this.state.author} />
-          </FormGroup>
+          <div className="row">
+            <FormGroup className="col-6">
+              <Label>Gamintojas</Label>
+              <Input type="text" onChange={this.handleChange} placeholder="Gamintojas" />
+            </FormGroup>
+            <FormGroup className="col-6">
+              <Label>Modelis</Label>
+              <Input type="text" onChange={this.handleChange} placeholder="Modelis" />
+            </FormGroup>
+          </div>
+          <div className="row">
+            <FormGroup className="col-4">
+              <Label>Metai</Label>
+              <Input type="number" />
+            </FormGroup>
+
+            <FormGroup className="col-4">
+              <Label>Sėdimų vietų skaičius</Label>
+              <Input type="number" />
+            </FormGroup>
+            <FormGroup className="col-4">
+              <Label>Durų skaičius</Label>
+              <Input type="number" />
+            </FormGroup>
+          </div>
           <div className="row">
             <FormGroup className="col-4">
               <Label>Kuras</Label>
-              <Input type="select" name="category" value={this.state.category} >
+              <Input type="select" name="category">
                 <option>Benzinas</option>
                 <option>Dyzelinas</option>
+                <option>Dujos</option>
                 <option>Elektra</option>
               </Input>
             </FormGroup>
             <FormGroup className="col-4">
               <Label>Pavarų dėžė</Label>
-              <Input type="select" name="category" value={this.state.category} >
+              <Input type="select" name="category">
                 <option>Mechaninė</option>
                 <option>Automatinė</option>
               </Input>
             </FormGroup>
             <FormGroup className="col-4">
-              <Label>Sėdimų vietų skaičius</Label>
-              <Input type="number" value={this.state.author} />
+              <Label>Papildoma informacija</Label>
+              <Input type="text" />
             </FormGroup>
           </div>
-          <Button>Submit</Button>
+          <Button>Pateikti</Button>
         </Form>
-      </div>
+      </div >
     )
   }
 

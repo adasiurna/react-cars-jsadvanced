@@ -1,0 +1,17 @@
+.station-item-card {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 240px;
+  height: 210px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.station-card-body {
+  background-color: antiquewhite;
+}
+.btn {
+  margin-top: 10px;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+}
