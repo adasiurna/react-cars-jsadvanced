@@ -148,6 +148,12 @@ class Cars extends Component {
             >
               Elektra
             </button>
+            <button className="btn-seablue"
+              type="button"
+              onClick={() => this.filterByParams({ fuelType: 'dujos' })}
+            >
+              Dujos
+            </button>
           </div>
 
           <div className="col-md-2">

@@ -33,7 +33,7 @@ class AddStationPage extends Component {
               <Input type="text" placeholder="Darbo laikas" />
             </FormGroup>
           </div>
-          <Button>Pateikti</Button>
+          <Button disabled>Pateikti</Button>
         </Form>
       </div >
     )

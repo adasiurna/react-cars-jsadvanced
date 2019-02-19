@@ -53,11 +53,11 @@ class NavBar extends Component {
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Pasirinkimai
+                  Administravimas
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem><Link to="/cars/add-car-page" >Add new car</Link></DropdownItem>
-                  <DropdownItem><Link to="/stations/add-station-page" >Add new station</Link></DropdownItem>
+                  <DropdownItem><Link to="/cars/add-car-page" >Pridėti automobilį</Link></DropdownItem>
+                  <DropdownItem><Link to="/stations/add-station-page" >Pridėti nuomos punktą</Link></DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
