@@ -6,6 +6,7 @@ import {
   CardTitle,
   Button
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import './StationsItem.css';
 class StationsItem extends Component {
 
@@ -21,7 +22,9 @@ class StationsItem extends Component {
               <CardSubtitle>{station.adresas}</CardSubtitle>
               <CardSubtitle>{station.telefonas}</CardSubtitle>
               <CardSubtitle>{station.darbo_laikas}</CardSubtitle>
-              <Button value={station.id}>Plačiau</Button>
+              <Link to={`/stations/${station.id}`} className="nav-link">
+                <Button value={station.id}>Plačiau</Button>
+              </Link>
             </CardBody>
           </Card>
         </div>;

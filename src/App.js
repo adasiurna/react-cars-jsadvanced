@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import Cars from './containers/Cars';
 import Stations from './containers/Stations';
 import CarItem from './containers/Cars/CarItem';
+import StationItem from './containers/Stations/StationItem';
 import AddCarPage from './containers/Cars/AddCarPage';
 import AddStationPage from './containers/Stations/AddStationPage';
 
@@ -30,6 +31,7 @@ class App extends Component {
               <Route path="/cars/add-car-page" component={AddCarPage} />
               <Route path="/stations/add-station-page" component={AddStationPage} />
               <Route path="/cars/:id" component={CarItem} />
+              <Route path="/stations/:id" component={StationItem} />
               <Route path="/cars" component={Cars} />
               <Route path="/stations" component={Stations} />
               <Route component={Page404} />
@@ -37,7 +39,7 @@ class App extends Component {
           </div>
           <footer className="page-footer font-small blue">
             <div className="footer-copyright text-center py-3">© 2018 Copyright:
-              <a href="#"> AutoNuoma.com</a>
+              <a href="/"> AutoNuoma.com</a>
             </div>
           </footer>
         </div>

@@ -6,28 +6,10 @@ class Stations extends Component {
   constructor(props) {
     super(props);
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-
     this.state = {
       stations: [],
-      stationForm: {},
       error: undefined
     }
-
-
-
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    if (!this.state.title) {
-      return;
-    }
-  }
-
-  handleChange(e) {
-    this.setState({ stationForm: e.target.value });
   }
 
   componentDidMount() {
@@ -51,15 +33,11 @@ class Stations extends Component {
       });
   }
 
-
-
   render() {
-
     return (
       <div>
         <h1>Nuomos punktai</h1>
         <StationsItem stations={this.state.stations} />
-
       </div>
     );
   }

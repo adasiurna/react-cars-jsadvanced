@@ -29,8 +29,6 @@ class NavBar extends Component {
     });
   }
 
-
-
   render() {
     return (
       <div>
@@ -58,8 +56,8 @@ class NavBar extends Component {
                   Pasirinkimai
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem><Link to="/cars/add-car-page">Add new car</Link></DropdownItem>
-                  <DropdownItem><Link to="/stations/add-station-page">Add new station</Link></DropdownItem>
+                  <DropdownItem><Link to="/cars/add-car-page" >Add new car</Link></DropdownItem>
+                  <DropdownItem><Link to="/stations/add-station-page" >Add new station</Link></DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

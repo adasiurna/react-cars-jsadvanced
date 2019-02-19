@@ -10,7 +10,6 @@ import {
 import { Link } from 'react-router-dom';
 import './CarsItem.css';
 
-
 class CarsItem extends Component {
 
   // sitas stateless komponentas turi priimti items masyva iš props ir ji atvaizduoti
@@ -21,7 +20,6 @@ class CarsItem extends Component {
         return <div key={car.id}>
           <Card className="car-item-card">
             <CardImg top width="100%" src="https://imgct2.aeplcdn.com/img/800x600/car-data/big/renault-duster-image-13039.png?v=31" alt="Card image cap" />
-
             <CardBody>
               <CardTitle>{car.automobilis}</CardTitle>
               <CardSubtitle>{car.pagaminimo_metai}</CardSubtitle>
@@ -30,7 +28,7 @@ class CarsItem extends Component {
               <Link to={`/cars/${car.id}`} className="nav-link">
                 <Button>
                   Plačiau
-              </Button>
+                </Button>
               </Link>
             </CardBody>
           </Card>
